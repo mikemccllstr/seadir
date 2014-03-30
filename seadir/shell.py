@@ -1,10 +1,12 @@
-'''Main console script for the SEA Directory application.
-
-This script uses the Cliff framework. It it installed and configured
-through the package's setup.py file, so check the entry_points defined
-there.
+'''The SEA Student Directory Utility is a command line tool that helps
+manage and produce the SEA school's student directory.
 
 '''
+
+# This script uses the Cliff framework. It it installed and configured
+# through the package's setup.py file, so check the entry_points defined
+# there.
+
 
 import logging
 import sys

@@ -1,9 +1,9 @@
-=======================
- SEA Directory Utility
-=======================
+===============================
+ SEA Student Directory Utility
+===============================
 
-The SEA Directory Utility is a command line tool that helps manage and
-produce the SEA school's student directory.
+The SEA Student Directory Utility is a command line tool that helps
+manage and produce the SEA school's student directory.
 
 To produce the directory, contact information is entered into a Google
 Spreadsheet that follows a pre-defined format. The expected contents
@@ -14,14 +14,27 @@ Usage
 =====
 
 This section describes various usage examples. The name of the command
-itself is `seadir`. Each of the different subcommands follows `seadir`
-on the command line.
+itself is ``seadir``. Each of the different subcommands follows
+``seadir`` on the command line.
 
 
-seadir clean
-------------
+Response Related Commands
+-------------------------
 
-The `seadir clean` command will process all the records in the
+These commands help manage the responses in the Google Sheet.
+
+
+seadir res-dump
+~~~~~~~~~~~~~~~
+
+The ``seadir res-dump`` command prints out all the records from the
+Google Sheet. It does not modify any data.
+
+
+seadir res-clean
+~~~~~~~~~~~~~~~~
+
+The ``seadir res-clean`` command will process all the records in the
 database and will perform any possible cleanups. These include:
 
   * Remove leading or trailing whitespace from all fields.
@@ -33,11 +46,11 @@ This command modifies data on existing records, but only in
 non-destructive ways.
 
 
-seadir validate
----------------
+seadir res-validate
+~~~~~~~~~~~~~~~~~~~
 
-The `seadir validate` command processes all the records and flags any
-situations that seem erroneous. For example:
+The ``seadir res-validate`` command processes all the records and
+flags any situations that seem erroneous. For example:
 
   * The same student listed in different classes.
   * Invalid email addresses.
@@ -46,10 +59,18 @@ situations that seem erroneous. For example:
 This command does not modify any data.
 
 
-seadir generate
----------------
+Directory Related Commands
+--------------------------
 
-The `seadir generate` command produces the actual directory files.
+These commands help produce the directory from the responses in the
+Google Sheet.
+
+
+seadir dir-generate
+-------------------
+
+The ``seadir dir-generate`` command produces the actual directory
+files.
 
 
 Sheet Format
@@ -122,6 +143,6 @@ Action
   This field can be blank, indicating that the record is a normal
   entry, meaning the associated values should be printed in directory,
   replacing any that might have been submitted before. Alternatively,
-  the field can have the value of `DELETE`, which means the prior
+  the field can have the value of ``DELETE``, which means the prior
   records for this child should be removed from the finished
   directory.
