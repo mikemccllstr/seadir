@@ -9,6 +9,27 @@ To produce the directory, contact information is entered into a Google
 Spreadsheet that follows a pre-defined format. The expected contents
 are described in detail below in the section titled `Sheet Format`_.
 
+Configuration
+=============
+
+Before you can use ``seadir`` for the first time, create a file in
+your current directory named ``seadir.ini``. Populate it with content
+like the following::
+
+  [Response Data]
+  email = youremail@example.com
+  password = YOUR_SECRET_GOOGLE_PASSWORD
+  spreadsheet = Student Directory Responses_Working
+  worksheet = Form Responses
+
+Note that absolutely everyone ought to be using Google's `2-Factor
+authentication`_.  To make this tool work when you have it set up, you
+need to create an `application-specific password`_.  The password you
+set up on that page should be the one you enter in the config file.
+
+.. _`2-Factor authentication`: https://support.google.com/accounts/answer/180744?hl=en
+.. _`application-specific password`: https://accounts.google.com/b/0/IssuedAuthSubTokens?hl=en&hide_authsub=1
+
 
 Usage
 =====

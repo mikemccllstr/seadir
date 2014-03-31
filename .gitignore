@@ -1,3 +1,6 @@
+# Ignore the config file, since it probably contains sensitive data
+seadir.ini
+
 *.py[cod]
 
 # C extensions
